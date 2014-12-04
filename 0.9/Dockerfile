@@ -1,7 +1,6 @@
 FROM debian:wheezy
 MAINTAINER Adam Hawkins <adam@hawkins.io>
 
-ENV DEBIAN_FRONTEND noninteractive
 ENV THRIFT_VERSION 0.9.2
 
 RUN buildDeps=" \
@@ -34,4 +33,4 @@ RUN buildDeps=" \
 	&& rm -rf /usr/src/thrift \
 	&& apt-get purge -y --auto-remove $buildDeps
 
-ENTRYPOINT [ "thrift" ]
+CMD [ "thrift" ]
