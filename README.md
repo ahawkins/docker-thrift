@@ -15,3 +15,11 @@ by mounting a directory. Here's an example of compiling
 `service.thrift` to ruby.
 
     docker run -v "$(pwd):/data" ahawkins/thrift thrift --gen rb /data/service.thrift
+
+# Language Specific Installations
+
+Thrift generates code for many lanuages. Some languages have
+additional things to install besides the thrift compiler. They are
+listed below:
+
+* Go - `go fmt` from go 1.4
