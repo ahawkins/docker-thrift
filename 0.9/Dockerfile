@@ -1,5 +1,5 @@
 FROM debian:wheezy
-MAINTAINER Adam Hawkins <adam@hawkins.io>
+MAINTAINER Adam Hawkins <hi@ahawkins.me>
 
 ENV THRIFT_VERSION 0.9.3
 
