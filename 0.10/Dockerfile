@@ -1,7 +1,7 @@
 FROM debian:wheezy
 MAINTAINER Adam Hawkins <hi@ahawkins.me>
 
-ENV THRIFT_VERSION 0.9.3
+ENV THRIFT_VERSION 0.10.0
 
 RUN buildDeps=" \
 		automake \
