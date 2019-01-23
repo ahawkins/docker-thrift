@@ -31,11 +31,11 @@ RUN buildDeps=" \
 	&& make install \
 	&& cd / \
 	&& rm -rf /usr/src/thrift \
-	&& curl -k -sSL "https://storage.googleapis.com/golang/go1.4.linux-amd64.tar.gz" -o go.tar.gz \
-	&& tar xzf go.tar.gz \
-	&& rm go.tar.gz \
-	&& cp go/bin/gofmt /usr/bin/gofmt \
-	&& rm -rf go \
-	&& apt-get purge -y --auto-remove $buildDeps
+	&& apt-get purge -y --auto-remove $buildDeps \
+	&& rm -rf /var/cache/apt/* \
+	&& rm -rf /var/lib/apt/lists/* \
+	&& rm -rf /tmp/* \
+	&& rm -rf /var/tmp/*
+
 
 CMD [ "thrift" ]
