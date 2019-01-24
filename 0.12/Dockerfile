@@ -26,7 +26,7 @@ RUN buildDeps=" \
 	&& rm thrift.tar.gz \
 	&& cd /usr/src/thrift \
 	&& ./bootstrap.sh \
-	&& ./configure  --without-python --without-cpp \
+	&& ./configure --disable-libs \
 	&& make \
 	&& make install \
 	&& cd / \
