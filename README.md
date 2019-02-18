@@ -15,6 +15,10 @@ by mounting a directory. Here's an example of compiling
 `service.thrift` to ruby.
 
     docker run -v "$(pwd):/data" ahawkins/thrift thrift --gen rb /data/service.thrift
+    
+To view generated files:
+    
+    docker cp [CONTAINER_ID]:/gen-rb .
 
 # Language Specific Installations
 
