@@ -16,7 +16,7 @@ by mounting a directory. Here's an example of compiling
 
     docker run -v "$(pwd):/data" ahawkins/thrift thrift --gen rb /data/service.thrift
     
-To view generated files:
+To copy generated files to host machine:
     
     docker cp [CONTAINER_ID]:/gen-rb .
 
