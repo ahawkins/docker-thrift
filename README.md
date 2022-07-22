@@ -14,7 +14,15 @@ This is image is intended to run as an executable. Files are provided
 by mounting a directory. Here's an example of compiling
 `service.thrift` to ruby.
 
-    docker run -v "$(pwd):/data" ahawkins/thrift thrift --gen rb /data/service.thrift
+```bash
+docker run -v "$(pwd):/data" ahawkins/thrift thrift --gen rb /data/service.thrift
+```
+
+# How To Build This Image
+
+```bash
+docker build -f 0.16/Dockerfile -t ahawkins/thrift:0.16.0
+```
 
 # Language Specific Installations
 
